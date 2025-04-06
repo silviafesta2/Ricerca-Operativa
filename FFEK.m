@@ -169,7 +169,7 @@ function FEEK(b,ind_cu,num_nodi);
             str(end)=[];
             fprintf("%s\n",str);
             fprintf("\tdelta=%d, v=%d\n", delta,val);
-            fprintf("\tX=[")
+            fprintf("\tX=[");
             str=sprintf('%d,',x);
             str(end)=']';
             fprintf("%s\n\n",str);
