@@ -77,8 +77,8 @@ function FEEK(b,ind_cu,num_nodi);
             for i=1:size(Caum,2)-1
                 R(Caum(i),Caum(i+1)) = R(Caum(i),Caum(i+1))-delta;
                 R(Caum(i+1),Caum(i)) = R(Caum(i+1),Caum(i))+delta;
-                riga = find(all(lavoro(:,1:2) == [Caum(i),Caum(i+1)], 2)) %trova la riga di lavoro da aggiornare
-                lavoro(riga,3)=lavoro(riga,3)-delta
+                riga = find(all(lavoro(:,1:2) == [Caum(i),Caum(i+1)], 2)); %trova la riga di lavoro da aggiornare
+                lavoro(riga,3)=lavoro(riga,3)-delta;
             end
             %aggiorno X
             for i=1:size(Caum,2)-1
@@ -110,7 +110,7 @@ function FEEK(b,ind_cu,num_nodi);
     num_archi=num_archi*2;
     no_caum=0;
     
-    %non funziona da sistemare  con le modifiche per il grafo residuo
+    
     caum=1;
     while no_caum==0
 
